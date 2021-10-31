@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from app.models.custommer_model import Customer
 
 from app.routers import (
     customers,
@@ -11,6 +12,7 @@ from app.settings.db import (
     metadata,
     engine
 )
+
 
 app = FastAPI(
     title="Супер-пупер МеГаШоП v 2.2E+5",
@@ -33,8 +35,8 @@ async def shutdown() -> None:
     database_ = app.state.database
     if database_.is_connected:
         await database_.disconnect()
-
-# app.include_router(customers.customers_route)
+print(Customer.get_column_alias)
+app.include_router(customers.customers_route)
 # app.include_router(orders.order_route)
 # app.include_router(items.items_route)
 # app.include_router(orderitems.links_route)
