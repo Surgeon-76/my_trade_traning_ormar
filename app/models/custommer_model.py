@@ -1,7 +1,4 @@
 from datetime import datetime
-import databases
-import sqlalchemy
-
 import ormar
 
 from app.settings.db import (
@@ -10,7 +7,7 @@ from app.settings.db import (
 )
 
 
-class Cusomer(ormar.Model):
+class Customer(ormar.Model):
     class Meta:
         database = database
         metadata = metadata
@@ -23,3 +20,4 @@ class Cusomer(ormar.Model):
     hasheed_password = ormar.String(max_length=50, index=True)
     created_on = ormar.DateTime(default=datetime.now, index=True)
     updated_on = ormar.DateTime(default=datetime.now, onupdate=datetime.now)
+    
