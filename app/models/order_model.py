@@ -7,7 +7,8 @@ from app.settings.db import(
     database,
     metadata
 )
-
+from app.models.item_model import Item
+from app.models.orderitem_model import OrderItem
 class Order(ormar.Model):
     class Meta:
         database = database
@@ -15,4 +16,4 @@ class Order(ormar.Model):
 
     id: int = ormar.Integer(primary_key=True, index=True)
     date_placed: datetime = ormar.DateTime(default=datetime.now(), index=True)
-    # line_items: Optional[]
+    #item: ormar.ManyToMany(Item)
