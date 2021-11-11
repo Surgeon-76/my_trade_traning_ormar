@@ -13,7 +13,7 @@ class Item(ormar.Model):
 
     id: int = ormar.Integer(primary_key=True, Index=True)
     name: str = ormar.String(max_length=200, Index=True)
-    cost_price: float = ormar.Decimal(scale=10, precision=2)
-    selling_price: float = ormar.Decimal(scale=10, precision=2)
+    cost_price: float = ormar.Decimal(scale=2, precision=2)
+    selling_price: float = ormar.Decimal(scale=2, precision=2)
     quantity: int = ormar.Integer()
     
