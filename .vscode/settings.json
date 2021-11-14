@@ -1,5 +1,7 @@
 {
     "cSpell.words": [
         "Cusomer"
-    ]
+    ],
+    "python.linting.enabled": true,
+    "python.envFile": "${workspaceFolder}/app/.env"
 }
