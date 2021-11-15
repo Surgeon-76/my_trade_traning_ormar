@@ -2,6 +2,9 @@
     "cSpell.words": [
         "Cusomer"
     ],
+<<<<<<< HEAD
     "python.linting.enabled": true,
     "python.envFile": "${workspaceFolder}/app/.env"
+=======
+>>>>>>> 8664ea069fc5f619b123363639d602943db14cf7
 }

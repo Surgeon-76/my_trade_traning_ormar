@@ -16,4 +16,8 @@ class Order(ormar.Model):
 
     id: int = ormar.Integer(primary_key=True, index=True)
     date_placed: datetime = ormar.DateTime(default=datetime.now(), index=True)
+<<<<<<< HEAD
     items = ormar.ManyToMany(Item, through=OrderItem)
+=======
+    #items: ormar.ManyToMany(Item)
+>>>>>>> 8664ea069fc5f619b123363639d602943db14cf7
